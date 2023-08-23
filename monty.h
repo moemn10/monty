@@ -52,6 +52,7 @@ typedef struct data_s
     int data_mode;
 } data_t;
 extern data_t data;
+<<<<<<< HEAD
 void open_file_error(char *fn);
 void pall(stack_t **stack, unsigned int line_number);
 void add(stack_t **stack, unsigned int line_number);
@@ -95,5 +96,50 @@ int db_ecf(char *fn);
 void db_ecl(char *l, int line_num);
 int is_emp(char *l);
 int Z_num(char *num);
+=======
+void open_ferror(char *fn);
+void pull(stack_t **stack, unsigned int line_num);
+void _add(stack_t **stack, unsigned int line_num);
+void _div(stack_t **stack, unsigned int line_num);
+void _mul(stack_t **stack, unsigned int line_num);
+void _mod(stack_t **stack, unsigned int line_num);
+void _pop(stack_t **stack, unsigned int line_num);
+void _push(stack_t **stack, unsigned int line_num);
+void _pint(stack_t **stack, unsigned int line_num);
+void _swap(stack_t **stack, unsigned int line_num);
+void _nop(stack_t **stack, unsigned int line_num);
+void _sub(stack_t **stack, unsigned int line_num);
+void _pchar(stack_t **stack, unsigned int line_num);
+void _pstr(stack_t **stack, unsigned int line_num);
+void _queue(stack_t **stack, unsigned int line_num);
+void _stack(stack_t **stack, unsigned int line_num);
+void _rotl(stack_t **stack, unsigned int line_num);
+void _rotr(stack_t **stack, unsigned int line_num);
+size_t print_stack(const stack_t *h);
+stack_t *add_node(stack_t **hd, const int n);
+stack_t *add_stackint_end(stack_t **hd, const int n);
+void free_stack(stack_t *hd);
+void delete_top(stack_t **stack);
+void free_all();
+void pusage(void);
+void pinvalid_instruction(int line_number, char *opcode_instruction);
+void pmalloc_error();
+void ppush_error(int line_number);
+void pempty_stack(int line_number);
+void ppint(int line_number);
+void pswap(int line_number);
+void padd(int line_number);
+void psub(int line_number);
+void pdiv(int line_number);
+void pdiv_zero(int line_number);
+void pmul(int line_number);
+void pmod(int line_number);
+void ppchar(int line_number);
+void pchar_stack_empty(int line_number);
+int execf(char *fn);
+void execl(char *l, int line_number);
+int is_emptyl(char *l);
+int is_num(char *num);
+>>>>>>> e7b6c4dcecd72066c7aca9ebd7c16ac5b928d508
 
 #endif
