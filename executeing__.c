@@ -6,7 +6,7 @@
  * Return: 1 if line is empty.
  */
 
-int is_emptyl(char *l)
+int is_emp(char *l)
 {
 	int len = strlen(l);
 	int n;
@@ -32,7 +32,7 @@ int is_emptyl(char *l)
  * @fn: name of the file that has the operations
  * Return: 0 if success, if -1 failure
  */
-int execf(char *fn)
+int db_ecf(char *fn)
 {
 	char *o = NULL;
 	FILE *file;

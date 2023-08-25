@@ -13,7 +13,7 @@ void _mul(stack_t **stack, unsigned int line_num)
 
 	if ((*stack)->next)
 	{
-		(*stack)->next->n *= (*stack)->n;
+		(*stack)->next->i *= (*stack)->i;
 		del_top(stack);
 	}
 	else
@@ -48,9 +48,9 @@ void _div(stack_t **stack, unsigned int line_num)
 
 	if ((*stack)->next)
 	{
-		if ((*stack)->n == 0)
+		if ((*stack)->i == 0)
 			Z_div_zero(line_num);
-		(*stack)->next->n /= (*stack)->n;
+		(*stack)->next->i /= (*stack)->i;
 		del_top(stack);
 	}
 	else
