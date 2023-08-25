@@ -70,29 +70,29 @@ void db_ecl(char *l, int line_num)
 	int n;
 	data_t data;
 	instruction_t insts[] = {
-		{"push", _push},
-		{"sub", _sub},
+		{"push", push},
+		{"sub", sub},
 		{"div", _div},
-		{"add", _add},
-		{"mul", _mul},
-		{"mod", _mod},
-		{"pstr", _pstr},
-		{"rotl", _rotl},
-		{"rotr", _rotr},
-		{"pop", _pop},
-		{"pall", pull},
-		{"pint", _pint},
-		{"swap", _swap},
-		{"nop", _nop},
-		{"pchar", _pchar},
-		{"queue", _queue},
-		{"stack", _stack},
+		{"add", add},
+		{"mul", mul},
+		{"mod", mod},
+		{"pstr", pstr},
+		{"rotl", rotl},
+		{"rotr", rotr},
+		{"pop", pop},
+		{"pall", pall},
+		{"pint", pint},
+		{"swap", swap},
+		{"nop", nop},
+		{"pchar", pchar},
+		{"queue", queue},
+		{"stack", stack},
 	};
 	data.arg1 = strtok(l, " \n");
 	data.arg2 = strtok(NULL, " \n");
 	if (data.arg1[0] == '#')
 	{
-		_nop(&data.stack, line_num);
+		nop(&data.stack, line_num);
 		return;
 	}
 	for (n = 0; n < INSTRUCTIONS_COUNT; n++)

@@ -1,25 +1,25 @@
 #include "monty.h"
 
 /**
- * pull - Prints all value On the stack,
+ * pall - Prints all value On the stack,
  * Starting Tthe top of the stack.
  * @stack: Ptr To the top of the stack
  * @line_num: Line num Of current operation
  */
 
-void pull(stack_t **stack, unsigned int line_num)
+void pall(stack_t **stack, unsigned int line_num)
 {
 	UNUSED(line_num);
 	p_stack(*stack);
 }
 
 /**
- * _push - Pushes For element To the Stack.
+ * push - Pushes For element To the Stack.
  * @stack: Ptr the top Of the stack.
  * @line_num: Line num of the Current operation
  */
 
-void _push(stack_t **stack, unsigned int line_num)
+void push(stack_t **stack, unsigned int line_num)
 {
 	int i = 0;
 

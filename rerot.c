@@ -1,12 +1,12 @@
 #include "monty.h"
 
 /**
- * _rotl - make rerotre
+ * rotl - make rerotre
  * @stack: Point for the top of the stacks
  * @line_num: line number of the current operation
  */
 
-void _rotl(stack_t **stack, unsigned int line_num)
+void rotl(stack_t **stack, unsigned int line_num)
 {
 	int x = 0;
 	stack_t *k = NULL;
@@ -26,12 +26,12 @@ void _rotl(stack_t **stack, unsigned int line_num)
 }
 
 /**
- * _rotr - makre a retore..
+ * rotr - makre a retore..
  * @stack: point for the top of the stacks
  * @line_num: line number of the current operation
  */
 
-void _rotr(stack_t **stack, unsigned int line_num)
+void rotr(stack_t **stack, unsigned int line_num)
 {
 	int le = 0;
 	stack_t *k = NULL;

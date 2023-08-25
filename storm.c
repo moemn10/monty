@@ -6,7 +6,7 @@
  * @line_num: Line num of Current operation.
  */
 
-void _stack(stack_t **stack, unsigned int line_num)
+void stack(stack_t **stack, unsigned int line_num)
 {
 	UNUSED(stack);
 	UNUSED(line_num);

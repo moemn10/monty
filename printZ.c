@@ -1,12 +1,12 @@
 #include "monty.h"
 
 /**
- * _pint - print exds
+ * pint - print exds
  * @stack: Ptr To top of Stack
  * @line_num: Line num the Current operation
  */
 
-void _pint(stack_t **stack, unsigned int line_num)
+void pint(stack_t **stack, unsigned int line_num)
 {
 	if (stack == NULL || *stack == NULL)
 		Z_pint(line_num);
@@ -26,12 +26,12 @@ void Z_pint(int line_num)
 }
 
 /**
- * _swap - swaping elments
+ * swap - swaping elments
  * @stack: Ptr for top oF The Stack
  * @line_num: Line num the Current operation.
  */
 
-void _swap(stack_t **stack, unsigned int line_num)
+void swap(stack_t **stack, unsigned int line_num)
 {
 	int t;
 

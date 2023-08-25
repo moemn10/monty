@@ -2,13 +2,13 @@
 #define MONTY_H
 
 #include <stdio.h>
-#include <stdlib.h>
 #include <string.h>
 #include <sys/types.h>
 #include <unistd.h>
 #include <ctype.h>
 #include <stdint.h>
 #include <stdarg.h>
+#include <stdlib.h>
 
 #define STACK 1
 #define QUEUE 0
@@ -60,7 +60,7 @@ size_t p_stack(const stack_t *u);
 stack_t *ext_Node(stack_t **kr, const int i);
 stack_t *ext_stack_end(stack_t **kr, const int i);
 void data_stack(stack_t *kr);
-void del_top(stack_t **stack);
+void delete_top(stack_t **stack);
 void f_All();
 void root(void);
 void p_val(int line_num, char *op_code_user);
@@ -82,22 +82,22 @@ void db_ecl(char *l, int line_num);
 int is_emp(char *l);
 int Z_num(char *num);
 void open_ferror(char *fn);
-void pull(stack_t **stack, unsigned int line_num);
-void _add(stack_t **stack, unsigned int line_num);
+void pall(stack_t **stack, unsigned int line_num);
+void add(stack_t **stack, unsigned int line_num);
 void _div(stack_t **stack, unsigned int line_num);
-void _mul(stack_t **stack, unsigned int line_num);
-void _mod(stack_t **stack, unsigned int line_num);
-void _pop(stack_t **stack, unsigned int line_num);
-void _push(stack_t **stack, unsigned int line_num);
-void _pint(stack_t **stack, unsigned int line_num);
-void _swap(stack_t **stack, unsigned int line_num);
-void _nop(stack_t **stack, unsigned int line_num);
-void _sub(stack_t **stack, unsigned int line_num);
-void _pchar(stack_t **stack, unsigned int line_num);
-void _pstr(stack_t **stack, unsigned int line_num);
-void _queue(stack_t **stack, unsigned int line_num);
-void _stack(stack_t **stack, unsigned int line_num);
-void _rotl(stack_t **stack, unsigned int line_num);
-void _rotr(stack_t **stack, unsigned int line_num);
+void mul(stack_t **stack, unsigned int line_num);
+void mod(stack_t **stack, unsigned int line_num);
+void pop(stack_t **stack, unsigned int line_num);
+void push(stack_t **stack, unsigned int line_num);
+void pint(stack_t **stack, unsigned int line_num);
+void swap(stack_t **stack, unsigned int line_num);
+void nop(stack_t **stack, unsigned int line_num);
+void sub(stack_t **stack, unsigned int line_num);
+void pchar(stack_t **stack, unsigned int line_num);
+void pstr(stack_t **stack, unsigned int line_num);
+void queue(stack_t **stack, unsigned int line_num);
+void stack(stack_t **stack, unsigned int line_num);
+void rotl(stack_t **stack, unsigned int line_num);
+void rotr(stack_t **stack, unsigned int line_num);
 int64_t getline(char **l, size_t *len, FILE *file);
 #endif

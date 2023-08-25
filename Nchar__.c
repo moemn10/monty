@@ -1,12 +1,12 @@
 #include "monty.h"
 
 /**
- * _pchar - Print Char.
+ * pchar - Print Char.
  * @stack: Pointer To the Top OF the Stack.
  * @line_num: Line number of the current operation
  */
 
-void _pchar(stack_t **stack, unsigned int line_num)
+void pchar(stack_t **stack, unsigned int line_num)
 {
 	int i;
 
@@ -26,7 +26,7 @@ void _pchar(stack_t **stack, unsigned int line_num)
  * @line_num: Line Number this of Current Operation
  */
 
-void _pstr(stack_t **stack, unsigned int line_num)
+void pstr(stack_t **stack, unsigned int line_num)
 {
 	stack_t *x;
 

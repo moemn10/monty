@@ -1,12 +1,12 @@
 #include "monty.h"
 
 /**
- * _mul -multiplication for the second top elements
+ * mul -multiplication for the second top elements
  * of the stack with the top element of the stack.
  * @stack: is pointer of stack
  * @line_num: number line of cuurent operation
  */
-void _mul(stack_t **stack, unsigned int line_num)
+void mul(stack_t **stack, unsigned int line_num)
 {
 	if (stack == NULL || *stack == NULL)
 		Z_mul(line_num);
@@ -14,7 +14,7 @@ void _mul(stack_t **stack, unsigned int line_num)
 	if ((*stack)->next)
 	{
 		(*stack)->next->i *= (*stack)->i;
-		del_top(stack);
+		delete_top(stack);
 	}
 	else
 		Z_mul(line_num);
@@ -51,7 +51,7 @@ void _div(stack_t **stack, unsigned int line_num)
 		if ((*stack)->i == 0)
 			Z_div_one(line_num);
 		(*stack)->next->i /= (*stack)->i;
-		del_top(stack);
+		delete_top(stack);
 	}
 	else
 		Z_div(line_num);

@@ -1,12 +1,12 @@
 #include "monty.h"
 
 /**
- * _add - add For The Stack .
+ * add - add For The Stack .
  * @stack: Ptr To Stack.
  * @line_num: Current operation line num
  */
 
-void _add(stack_t **stack, unsigned int line_num)
+void add(stack_t **stack, unsigned int line_num)
 {
 	if (stack == NULL || *stack == NULL)
 		Z_add(line_num);
@@ -14,7 +14,7 @@ void _add(stack_t **stack, unsigned int line_num)
 	if ((*stack)->next)
 	{
 		(*stack)->next->i += (*stack)->i;
-		del_top(stack);
+		delete_top(stack);
 	}
 	else
 		Z_add(line_num);
@@ -34,11 +34,11 @@ void Z_add(int line_num)
 }
 
 /**
- * _sub - Sub_Tracks.
+ * sub - Sub_Tracks.
  * @stack: stack ptr
  * @line_num: Current operation num line.
  */
-void _sub(stack_t **stack, unsigned int line_num)
+void sub(stack_t **stack, unsigned int line_num)
 {
 	if (stack == NULL || *stack == NULL)
 		Z_sub(line_num);
@@ -46,7 +46,7 @@ void _sub(stack_t **stack, unsigned int line_num)
 	if ((*stack)->next)
 	{
 		(*stack)->next->i -= (*stack)->i;
-		del_top(stack);
+		delete_top(stack);
 	}
 	else
 		Z_sub(line_num);
@@ -54,12 +54,12 @@ void _sub(stack_t **stack, unsigned int line_num)
 
 
 /**
- * _mod - compute The RESET of The Division the Second top Elements.
+ * mod - compute The RESET of The Division the Second top Elements.
  * of The stack With the Top Elements of the Stack.
  * @stack: stack ptr
  * @line_num: Crrent operation num line
  */
-void _mod(stack_t **stack, unsigned int line_num)
+void mod(stack_t **stack, unsigned int line_num)
 {
 	if (stack == NULL || *stack == NULL)
 		Z_mod(line_num);
@@ -69,7 +69,7 @@ void _mod(stack_t **stack, unsigned int line_num)
 		if ((*stack)->i == 0)
 			Z_div_one(line_num);
 		(*stack)->next->i %= (*stack)->i;
-		del_top(stack);
+		delete_top(stack);
 	}
 	else
 		Z_mod(line_num);

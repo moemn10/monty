@@ -1,26 +1,26 @@
 #include "monty.h"
 
 /**
- * _pop - pop function
+ * pop - pop function
  * @stack: pointer for Top of the Stack
  * @line_num: Line num the Current operation.
  */
 
-void _pop(stack_t **stack, unsigned int line_num)
+void pop(stack_t **stack, unsigned int line_num)
 {
 	if (stack == NULL || *stack == NULL)
 		user_stack(line_num);
-	del_top(stack);
+	delete_top(stack);
 }
 
 /**
- * _nop - getting nop fun
+ * nop - getting nop fun
  * @stack: Ptr for top of The Stack
  * @line_num: Line num of the Current Operation.
  *
 */
 
-void _nop(stack_t **stack, unsigned int line_num)
+void nop(stack_t **stack, unsigned int line_num)
 {
 	UNUSED(stack);
 	UNUSED(line_num);
