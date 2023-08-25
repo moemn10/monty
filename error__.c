@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- * pmalloc- printing the errors of malloc .
+ * Z_malloc - printing the errors of malloc .
  */
 void Z_malloc(void)
 {
@@ -11,7 +11,7 @@ void Z_malloc(void)
 }
 
 /**
- * p_val_ instruction thats Prints an
+ * p_val - instruction thats Prints an
  * error message and exits
  * @line_num: current operation line number code
  * @op_code_code: the points to unrecognized op code
