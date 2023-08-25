@@ -12,7 +12,7 @@
 
 #define STACK 1
 #define QUEUE 0
-
+#define STACK_SIZE 100
 #define UNUSED(x) (void)(x)
 #define INSTRUCTIONS_COUNT 17
 #define _GNU_SOURCE
@@ -60,7 +60,7 @@ size_t p_stack(const stack_t *u);
 stack_t *ext_Node(stack_t **kr, const int i);
 stack_t *ext_stack_end(stack_t **kr, const int i);
 void data_stack(stack_t *kr);
-void delete_top(stack_t **stack);
+void delete_top();
 void f_All();
 void root(void);
 void p_val(int line_num, char *op_code_user);

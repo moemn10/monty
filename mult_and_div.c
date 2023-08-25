@@ -81,3 +81,14 @@ void Z_div_one(int line_num)
 	f_All();
 	exit(EXIT_FAILURE);
 }
+
+/**
+ * Z_mod - mode error
+ * @line_num: number lone of the current operation
+*/
+void Z_mod(int line_num)
+{
+	fprintf(stderr, "L%d: can't mod, stack too short\n", line_num);
+	f_All();
+	exit(EXIT_FAILURE);
+}
