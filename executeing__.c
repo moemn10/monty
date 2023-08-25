@@ -34,7 +34,7 @@ int is_emp(char *l)
  */
 int db_ecf(char *fn)
 {
-	char *o = NULL;
+	char *l = NULL;
 	FILE *file;
 	ssize_t reading;
 	size_t len = 0;
@@ -45,16 +45,16 @@ int db_ecf(char *fn)
 	if (file == NULL)
 		open_ferror(fn);
 	data.file = file;
-	while ((reading = getline(&o, &len, file)) != -1)
+	while ((reading = getline(&l, &len, file)) != -1)
 	{
 		data.line_num++;
-		data.o = o;
-		if (is_emp(data.o) == 1)
-			bd_ecl(data.o, data.line_num);
+		data.l = l;
+		if (is_emp(data.l) == 1)
+			db_ecl(data.l, data.line_num);
 	}
 	data_stack(data.stack);
 	fclose(file);
-	free(o);
+	free(l);
 	return (0);
 }
 
@@ -62,7 +62,7 @@ int db_ecf(char *fn)
 /**
  * db_ecl- executing a single operations line
  * @l: operation's line
- * @line_number: current operation's line number
+ * @line_num: current operation's line number
  */
 void db_ecl(char *l, int line_num)
 {
@@ -72,7 +72,7 @@ void db_ecl(char *l, int line_num)
 	instruction_t insts[] = {
 		{"push", _push},
 		{"sub", _sub},
-		{"div", _the_div},
+		{"div", _div},
 		{"add", _add},
 		{"mul", _mul},
 		{"mod", _mod},
@@ -80,7 +80,7 @@ void db_ecl(char *l, int line_num)
 		{"rotl", _rotl},
 		{"rotr", _rotr},
 		{"pop", _pop},
-		{"pall", _pall},
+		{"pall", pull},
 		{"pint", _pint},
 		{"swap", _swap},
 		{"nop", _nop},

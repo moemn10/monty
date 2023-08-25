@@ -5,6 +5,10 @@
 #include <stdlib.h>
 #include <string.h>
 #include <sys/types.h>
+#include <unistd.h>
+#include <ctype.h>
+#include <stdint.h>
+#include <stdarg.h>
 
 #define STACK 1
 #define QUEUE 0
@@ -25,8 +29,8 @@
 typedef struct stacks_
 {
     int i;
-    struct stack_s *prev;
-    struct stack_s *next;
+    struct stacks_ *prev;
+    struct stacks_ *next;
 } stack_t;
 
 /**
@@ -95,5 +99,5 @@ void _queue(stack_t **stack, unsigned int line_num);
 void _stack(stack_t **stack, unsigned int line_num);
 void _rotl(stack_t **stack, unsigned int line_num);
 void _rotr(stack_t **stack, unsigned int line_num);
-
+int64_t getline(char **l, size_t *len, FILE *file);
 #endif

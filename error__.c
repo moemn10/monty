@@ -14,7 +14,7 @@ void Z_malloc(void)
  * p_val - instruction thats Prints an
  * error message and exits
  * @line_num: current operation line number code
- * @op_code_code: the points to unrecognized op code
+ * @op_code_user: the points to unrecognized op code
  */
 void p_val(int line_num, char *op_code_user)
 {

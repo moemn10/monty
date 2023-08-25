@@ -1,12 +1,12 @@
 #include "monty.h"
 
 /**
- * storm .
+ * _stack - stacks functions.
  * @stack: Ptr for top of the Stack.
- * @line_number: Line num of Current operation.
+ * @line_num: Line num of Current operation.
  */
 
-void stack(stack_t **stack, unsigned int line_num)
+void _stack(stack_t **stack, unsigned int line_num)
 {
 	UNUSED(stack);
 	UNUSED(line_num);
@@ -15,9 +15,9 @@ void stack(stack_t **stack, unsigned int line_num)
 
 
 /**
- * queue .
+ * queue - find queue normal
  * @stack: Ptr for Top of The Stack
- * @line_number: Line num of the Current operation.
+ * @line_num: Line num of the Current operation.
  */
 
 void queue(stack_t **stack, unsigned int line_num)

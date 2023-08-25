@@ -49,7 +49,7 @@ void _div(stack_t **stack, unsigned int line_num)
 	if ((*stack)->next)
 	{
 		if ((*stack)->i == 0)
-			Z_div_zero(line_num);
+			Z_div_one(line_num);
 		(*stack)->next->i /= (*stack)->i;
 		del_top(stack);
 	}
@@ -71,10 +71,10 @@ void Z_div(int line_num)
 
 
 /**
- * Z_div_zero- printing 0 if there are errors.
+ * Z_div_one - printing 0 if there are errors.
  * @line_num: number line of the current opearation
  */
-void Zdiv_zero(int line_num)
+void Z_div_one(int line_num)
 {
 
 	fprintf(stderr, "L%d: division by zero\n", line_num);
