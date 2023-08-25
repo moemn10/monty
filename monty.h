@@ -68,7 +68,7 @@ void Z_swap(int line_num);
 void Z_add(int line_num);
 void Z_sub(int line_num);
 void Z_div(int line_num);
-void Z_div_one(int line_numb);
+void Z_div_one(int line_num);
 void Z_mul(int line_num);
 void Z_mod(int line_num);
 void Z_pchar(int line_num);
