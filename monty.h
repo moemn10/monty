@@ -79,5 +79,5 @@ void sub_n(stack_t **, unsigned int);
 void mul_n(stack_t **, unsigned int);
 void mod_n(stack_t **, unsigned int);
 void div_n(stack_t **, unsigned int);
-
+ssize_t getline(char **, long unsigned int *, struct _IO_FILE *);
 #endif

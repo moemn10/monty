@@ -19,11 +19,11 @@ void p_char(stack_t **stack, unsigned int line_num)
 }
 
 /**
- * p_strs - Print All strings.
+ * p_str - Print All strings.
  * @stack: Ptr to A ptr point top Node of The stack.
  * @ln: Interger represent the line Number for the opcode.
  */
-void print_str(stack_t **stack, __attribute__((unused))unsigned int ln)
+void p_str(stack_t **stack, __attribute__((unused))unsigned int ln)
 {
 	int ascii;
 	stack_t *tmp;

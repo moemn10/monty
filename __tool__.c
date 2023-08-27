@@ -121,7 +121,7 @@ void find_fn(char *opcode, char *val, int lnm, int format)
 
 /**
  * call_fn - Calling the givin function.
- * @fn: Ptr to the func that wil be called
+ * @func: Ptr to the func that wil be called
  * @op: string exists befor the opcode.
  * @val: string gives a numeric value.
  * @lnm: line numeber for the inst

@@ -58,7 +58,7 @@ void add_n(stack_t **stack, unsigned int line_num)
  * @stack: Ptr to A ptr point to top Node of The stack.
  * @line_num: Interger represent the line Number for The opcode.
  */
-void sub_nodes(stack_t **stack, unsigned int line_num)
+void sub_n(stack_t **stack, unsigned int line_num)
 {
 	int sum;
 
