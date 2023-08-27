@@ -1,4 +1,5 @@
 #include "monty.h"
+        stack_t *head = NULL;
 
 /**
  * main - Entry point of the program.
@@ -26,7 +27,6 @@ int main(int argc, char *argv[])
 stack_t *create_n(int i)
 {
 	stack_t *node;
-	stack_t *head = NULL;
 
 	node = malloc(sizeof(stack_t));
 	if (node == NULL)
