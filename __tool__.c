@@ -96,8 +96,8 @@ void find_fn(char *opcode, char *val, int lnm, int format)
 		{"div", div_n},
 		{"mul", mul_n},
 		{"mod", mod_n},
-		{"pchar", l_char},
-		{"pstr", print_str},
+		{"pchar", p_char},
+		{"pstr", p_str},
 		{"rotl", rotl},
 		{"rotr", rotr},
 		{NULL, NULL}
