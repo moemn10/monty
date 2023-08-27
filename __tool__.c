@@ -11,7 +11,7 @@ void open_f(char *file_n)
 	FILE *fd = fopen(file_n, "r");
 
 	if (file_n == NULL || fd == NULL)
-		errors_1(2, file_name);
+		errors_1(2, file_n);
 
 	read_f(fd);
 	fclose(fd);
@@ -96,7 +96,7 @@ void find_fn(char *opcode, char *val, int lnm, int format)
 		{"div", div_n},
 		{"mul", mul_n},
 		{"mod", mod_n},
-		{"pchar", p_char},
+		{"pchar", l_char},
 		{"pstr", print_str},
 		{"rotl", rotl},
 		{"rotr", rotr},
@@ -120,13 +120,13 @@ void find_fn(char *opcode, char *val, int lnm, int format)
 
 
 /**
- * call_fn - Calling the function we want.
- * @fn: P to the func that will be called.
- * @op: str that gives the opcode.
- * @val: str that gives a numeric value.
- * @lnm: number of lines for the instr.
- * @format: Format specifier. If 0 nde will be exists as a stack.
- * if 1 nod will be exists as a queue.
+ * call_fn - Calling the givin function.
+ * @fn: Ptr to the func that wil be called
+ * @op: string exists befor the opcode.
+ * @val: string gives a numeric value.
+ * @lnm: line numeber for the inst
+ * @format: Format specifier. If 0 Nodes will be entered as a stack.
+ * if 1 nodes will be entered as a queue.
  */
 void call_fn(op_func func, char *op, char *val, int lnm, int format)
 {
@@ -143,7 +143,7 @@ void call_fn(op_func func, char *op, char *val, int lnm, int format)
 			fl = -1;
 		}
 		if (val == NULL)
-			errors_1(5, ln);
+			errors_1(5, lnm);
 		for (n = 0; val[n] != '\0'; n++)
 		{
 			if (isdigit(val[n]) == 0)
@@ -153,8 +153,8 @@ void call_fn(op_func func, char *op, char *val, int lnm, int format)
 		if (format == 0)
 			func(&node, lnm);
 		if (format == 1)
-			add_queue_(&node, ln);
+			add_queue_(&node, lnm);
 	}
 	else
-		func(&head, lm);
+		func(&head, lnm);
 }

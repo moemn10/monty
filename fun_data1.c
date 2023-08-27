@@ -39,7 +39,7 @@ void p_stack(stack_t **stack, unsigned int line_num)
 	tmp = *stack;
 	while (tmp != NULL)
 	{
-		printf("%d\n", tmp->n);
+		printf("%d\n", tmp->i);
 		tmp = tmp->next;
 	}
 }
@@ -54,7 +54,7 @@ void pop_up_top(stack_t **stack, unsigned int line_num)
 	stack_t *tmp;
 
 	if (stack == NULL || *stack == NULL)
-		more_err(7, line_num);
+		errors_2(7, line_num);
 
 	tmp = *stack;
 	*stack = tmp->next;
@@ -71,6 +71,6 @@ void pop_up_top(stack_t **stack, unsigned int line_num)
 void p_top(stack_t **stack, unsigned int line_num)
 {
 	if (stack == NULL || *stack == NULL)
-		more_err(6, line_num);
-	printf("%d\n", (*stack)->n);
+		errors_2(6, line_num);
+	printf("%d\n", (*stack)->i);
 }

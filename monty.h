@@ -11,7 +11,7 @@
 #define _GNU_SOURCE
 
 /**
- * struct stacks_ - doubly linked list representation of a stack or queue
+ * struct stack_s - doubly linked list representation of a stack or queue
  * @i: integer number
  * @prev: points to the previous element of the stack or queue
  * @next: points to the next element of the stack or queue
@@ -19,7 +19,7 @@
  * Description: doubly linked list node structure
  * for stack, queues, LIFO, FIFO
  */
-typedef struct stacks_
+typedef struct stack_s
 {
         int i;
         struct stack_s *prev;
@@ -48,7 +48,7 @@ void p_top(stack_t **, unsigned int);
 void pop_up_top(stack_t **, unsigned int);
 void pop_up_nop(stack_t **, unsigned int);
 void swap_n(stack_t **, unsigned int);
-stack_t *create_n(int n);
+stack_t *create_n(int i);
 void free_n(void);
 void p_stack(stack_t **, unsigned int);
 void add_stack_(stack_t **, unsigned int);
@@ -69,8 +69,8 @@ void errors_1(int error_s, ...);
 void errors_2(int error_s, ...);
 
 /*Strings  operations*/
-void print_char(stack_t **, unsigned int);
-void print_str(stack_t **, unsigned int);
+void p_char(stack_t **, unsigned int);
+void p_str(stack_t **, unsigned int);
 void rotl(stack_t **, unsigned int);
 
 /*Math operations nodes*/

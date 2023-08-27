@@ -12,7 +12,7 @@ void p_char(stack_t **stack, unsigned int line_num)
 	if (stack == NULL || *stack == NULL)
 		str_errors(11, line_num);
 
-	ascii = (*stack)->n;
+	ascii = (*stack)->i;
 	if (ascii < 0 || ascii > 127)
 		str_errors(10, line_num);
 	printf("%c\n", ascii);
@@ -37,7 +37,7 @@ void print_str(stack_t **stack, __attribute__((unused))unsigned int ln)
 	tmp = *stack;
 	while (tmp != NULL)
 	{
-		ascii = tmp->n;
+		ascii = tmp->i;
 		if (ascii <= 0 || ascii > 127)
 			break;
 		printf("%c", ascii);

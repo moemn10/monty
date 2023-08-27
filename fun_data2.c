@@ -46,8 +46,8 @@ void add_n(stack_t **stack, unsigned int line_num)
 		errors_2(8, line_num, "add");
 
 	(*stack) = (*stack)->next;
-	sum = (*stack)->n + (*stack)->prev->n;
-	(*stack)->n = sum;
+	sum = (*stack)->i + (*stack)->prev->i;
+	(*stack)->i = sum;
 	free((*stack)->prev);
 	(*stack)->prev = NULL;
 }
@@ -56,9 +56,9 @@ void add_n(stack_t **stack, unsigned int line_num)
 /**
  * sub_n - Add for top Two Elements for the stack.
  * @stack: Ptr to A ptr point to top Node of The stack.
- * @line_number: Interger represent the line Number for The opcode.
+ * @line_num: Interger represent the line Number for The opcode.
  */
-void sub_nodes(stack_t **stack, unsigned int line_number)
+void sub_nodes(stack_t **stack, unsigned int line_num)
 {
 	int sum;
 
@@ -68,8 +68,8 @@ void sub_nodes(stack_t **stack, unsigned int line_number)
 
 
 	(*stack) = (*stack)->next;
-	sum = (*stack)->n - (*stack)->prev->n;
-	(*stack)->n = sum;
+	sum = (*stack)->i - (*stack)->prev->i;
+	(*stack)->i = sum;
 	free((*stack)->prev);
 	(*stack)->prev = NULL;
 }
@@ -87,11 +87,11 @@ void div_n(stack_t **stack, unsigned int line_num)
 	if (stack == NULL || *stack == NULL || (*stack)->next == NULL)
 		errors_2(8, line_num, "div");
 
-	if ((*stack)->n == 0)
+	if ((*stack)->i == 0)
 		errors_2(9, line_num);
 	(*stack) = (*stack)->next;
-	sum = (*stack)->n / (*stack)->prev->n;
-	(*stack)->n = sum;
+	sum = (*stack)->i / (*stack)->prev->i;
+	(*stack)->i = sum;
 	free((*stack)->prev);
 	(*stack)->prev = NULL;
 }

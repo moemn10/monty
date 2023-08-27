@@ -13,8 +13,8 @@ void mul_n(stack_t **stack, unsigned int line_num)
 		errors_2(8, line_num, "mul");
 
 	(*stack) = (*stack)->next;
-	sum = (*stack)->n * (*stack)->prev->n;
-	(*stack)->n = sum;
+	sum = (*stack)->i * (*stack)->prev->i;
+	(*stack)->i = sum;
 	free((*stack)->prev);
 	(*stack)->prev = NULL;
 }
@@ -34,11 +34,11 @@ void mod_n(stack_t **stack, unsigned int line_num)
 		errors_2(8, line_num, "mod");
 
 
-	if ((*stack)->n == 0)
-		errrors_2(9, line_num);
+	if ((*stack)->i == 0)
+		errors_2(9, line_num);
 	(*stack) = (*stack)->next;
-	sum = (*stack)->n % (*stack)->prev->n;
-	(*stack)->n = sum;
+	sum = (*stack)->i % (*stack)->prev->i;
+	(*stack)->i = sum;
 	free((*stack)->prev);
 	(*stack)->prev = NULL;
 }
