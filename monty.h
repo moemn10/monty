@@ -37,7 +37,7 @@ typedef struct stacks_
 typedef struct instruction_s
 {
         char *opcode;
-        void (*f)(stack_t **stack, unsigned int line_number);
+        void (*f)(stack_t **stack, unsigned int line_num);
 } instruction_t;
 
 extern stack_t *head;
@@ -56,24 +56,24 @@ void add_queue_(stack_t **, unsigned int);
 void call_fn(op_func, char *, char *, int, int);
 
 /*file operations*/
-int p_line(char *buffer, int line_number, int format);
+int p_line(char *buffer, int line_num, int format);
 void read_f(FILE *);
 int l_char(FILE *);
-void open_f(char *file_name);
+void open_f(char *file_n);
 void find_fn(char *, char *, int, int);
 
 /*Error hanlding*/
-void str_errors(int error_code, ...);
+void str_errors(int error_s, ...);
 void rotr(stack_t **, unsigned int);
-void errors_1(int error_code, ...);
-void errors_2(int error_code, ...);
+void errors_1(int error_s, ...);
+void errors_2(int error_s, ...);
 
-/*String operations*/
+/*Strings  operations*/
 void print_char(stack_t **, unsigned int);
 void print_str(stack_t **, unsigned int);
 void rotl(stack_t **, unsigned int);
 
-/*Math operations with nodes*/
+/*Math operations nodes*/
 void add_n(stack_t **, unsigned int);
 void sub_n(stack_t **, unsigned int);
 void mul_n(stack_t **, unsigned int);
